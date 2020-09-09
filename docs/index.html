@@ -8,11 +8,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
     />
-    <link rel="stylesheet" href="https://fonts.xz.style/serve/fira-code.css" />
     <style>
+      @font-face {
+        font-family: 'vcr_osd_monoregular';
+        src: url('assets/vcr_osd_mono_1.001-webfont.woff2') format('woff2'),
+            url('assets/vcr_osd_mono_1.001-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
       :root {
-        --nc-font-sans: "Fira Code", monospace;
-        --nc-font-mono: "Fira Code", monospace;
+        --nc-font-sans: "vcr_osd_monoregular", monospace;
+        --nc-font-mono: "vcr_osd_monoregular", monospace;
         --nc-tx-1: #ffffff;
         --nc-tx-2: #eeeeee;
         --nc-bg-1: #000000;
@@ -23,6 +31,15 @@
         --nc-lk-tx: #000000;
         --nc-ac-1: #00ff00;
         --nc-ac-tx: #000000;
+      }
+
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        text-transform: uppercase;
       }
     </style>
   </head>
